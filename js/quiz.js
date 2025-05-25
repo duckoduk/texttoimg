@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 }
 
-function autoWait(ms = 2000) {
+function autoWait(ms = 1000) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
