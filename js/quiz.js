@@ -71,24 +71,27 @@ document.addEventListener('DOMContentLoaded', () => {
   let disText = '';
 
   function waiting() {
-    return new Promise(resolve => {
-      function handler(e) {
-        if (e.type === 'keydown' && e.key === 'Enter') {
-          document.removeEventListener('keydown', handler);
-          checkBtn.removeEventListener('click', handler);
-          ans.disabled = true;
-          resolve();
-        } else if (e.type === 'click') {
-          document.removeEventListener('keydown', handler);
-          checkBtn.removeEventListener('click', handler);
-          ans.disabled = true;
-          resolve();
-        }
+  return new Promise(resolve => {
+    function handler(e) {
+      if (e.type === 'keydown' && e.key === 'Enter') {
+        document.removeEventListener('keydown', handler);
+        document.getElementById('check-button').removeEventListener('click', handler);
+        resolve();
+      } else if (e.type === 'click') {
+        document.removeEventListener('keydown', handler);
+        document.getElementById('check-button').removeEventListener('click', handler);
+        resolve();
       }
-      document.addEventListener('keydown', handler);
-      checkBtn.addEventListener('click', handler);
-    });
-  }
+    }
+    document.addEventListener('keydown', handler);
+    document.getElementById('check-button').addEventListener('click', handler);
+  });
+}
+
+function autoWait(ms = 2000) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 
   function getFirst(data) {
     let ind = -1;
@@ -155,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       void resPage.offsetWidth; // 재렌더링 트릭
       resPage.classList.add(isCorrect ? 'correct-glow' : 'wrong-glow');
 
-      await waiting();
+      await autoWait(2000);
       ans.disabled = false;
     }
 
@@ -224,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
       void resPage.offsetWidth; // 재렌더링 트릭
       resPage.classList.add(isCorrect ? 'correct-glow' : 'wrong-glow');
 
-      await waiting();
+      await autoWait(2000);
       ans.disabled = false;
     }
 
