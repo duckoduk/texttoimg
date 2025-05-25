@@ -124,7 +124,7 @@ input[type="button"]:hover, button:hover {
   background: rgba(255,255,255,0.8);
   border-radius: 14px;
   padding: 26px 20px 18px 20px;
-  margin-top: 20px;
+  margin-top: 0px;
   box-shadow: 0 2px 14px rgba(17,146,144,0.07);
   color: #007c84;
   text-align: center;
@@ -133,7 +133,7 @@ input[type="button"]:hover, button:hover {
   font-size: 1.18rem;
   color: #008d92;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 #result-page p {
   color: #077;

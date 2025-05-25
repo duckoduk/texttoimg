@@ -109,8 +109,10 @@ function autoWait(ms = 1000) {
     let quizLen = shfData.length;
     for (let index = 0; index < quizLen; index++) {
       ans.focus();
+      
       const q = shfData[index];
       resPage.style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       resText = '';
       disText = '';
 
@@ -178,6 +180,7 @@ function autoWait(ms = 1000) {
       const q = remaining[randomIndex];
 
       resPage.style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       resText = '';
       disText = '';
 
