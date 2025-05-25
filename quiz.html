@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/quiz.css">
+    <title>Word Test</title>
+</head>
+<body>
+    <!-- <h1>Word Test</h1> -->
+    <div class="cheer-banner">
+        <div class="cheer-track" id="cheer-track">
+          <!-- JS에서 메시지를 동적으로 여기에 추가 -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="quiz">
+            <p id="quiz-counter">Question 1 of 10</p>
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+              </div>
+            <p id="unit-indicater">Unit 1 Exercise 1</p>
+            <p id="english-sen">ENGLISH SENTENCE</p>
+            <p id="korean-sen">KOREAN SENTENCE</p>
+            <input type="text" id="answer" autocomplete="off" placeholder="여기에 정답 입력...">
+            <input type="button" id="check-button" value="확인">
+            <br>
+        </div> 
+        <div id="result-page", style="display: none;">
+            <h3 id="result-indicater"></h3>
+            <p id="result-discription"></p>
+            <p>Enter키 또는 확인 버튼을 눌러 계속</p>
+        </div>
+        <input type="button" id="go-home-button" value="메인 화면으로">
+    </div>
+    <footer>
+        © 2025 SEMICOLON. All rights reserved.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+    <script src="js/quiz.js" defer></script>
+
+</body>
+</html>
