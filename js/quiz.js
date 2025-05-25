@@ -158,7 +158,7 @@ function autoWait(ms = 1000) {
       void resPage.offsetWidth; // 재렌더링 트릭
       resPage.classList.add(isCorrect ? 'correct-glow' : 'wrong-glow');
 
-      await autoWait(2000);
+      await autoWait(1000);
       ans.disabled = false;
     }
 
