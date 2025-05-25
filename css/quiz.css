@@ -13,7 +13,7 @@ body {
 
 .container {
   max-width: 430px;
-  margin: 56px auto 0 auto;
+  margin: 10px auto 0 auto;
   background: rgba(234,243,244,0.97);
   border-radius: 22px;
   box-shadow: 0 10px 32px rgba(126,223,223,0.10);
@@ -188,7 +188,7 @@ footer {
 @media (max-width: 580px) {
   .container {
     max-width: 99vw;
-    padding: 23px 7vw 22px 7vw;
+    padding: 23px 2vw 22px 7vw;
   }
   #answer {
     width: 99%;
